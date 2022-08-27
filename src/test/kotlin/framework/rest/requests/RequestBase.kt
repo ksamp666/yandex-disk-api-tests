@@ -9,7 +9,7 @@ import java.io.File
 
 abstract class RequestBase<RequestType> : IRequest {
     companion object {
-        private const val DEFAULT_USER = "skyainterview"
+        private val DEFAULT_USER = PropsReader.getDefaultUser()
         private val BASE_URL = PropsReader.getApiUrl()
         private val DEFAULT_TOKEN = PropsReader.getApiOauthTokenForUser(DEFAULT_USER)
     }

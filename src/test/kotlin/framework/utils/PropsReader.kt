@@ -27,6 +27,10 @@ class PropsReader {
             return getProperty("api.url")
         }
 
+        fun getDefaultUser(): String {
+            return getProperty("default.user")
+        }
+
         fun getApiOauthTokenForUser(userName: String): String {
             return getProperty("api.user.${userName}.token")
         }
